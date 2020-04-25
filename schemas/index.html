@@ -38,7 +38,7 @@
     
     
       
-        <title>Exceptions - Python Schema Registry Client</title>
+        <title>Schemas - Python Schema Registry Client</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#clienterror" tabindex="1" class="md-skip">
+      <a href="#schemas" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Exceptions
+                Schemas
               
             </span>
           
@@ -262,18 +262,6 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../schemas/" title="Schemas" class="md-nav__link">
-      Schemas
-    </a>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
@@ -284,10 +272,58 @@
       
     
     
-    <a href="./" title="Exceptions" class="md-nav__link md-nav__link--active">
-      Exceptions
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Schemas
+      </label>
+    
+    <a href="./" title="Schemas" class="md-nav__link md-nav__link--active">
+      Schemas
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#avroschema" class="md-nav__link">
+    AvroSchema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemaversion" class="md-nav__link">
+    SchemaVersion
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../exceptions/" title="Exceptions" class="md-nav__link">
+      Exceptions
+    </a>
   </li>
 
     
@@ -320,6 +356,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#avroschema" class="md-nav__link">
+    AvroSchema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemaversion" class="md-nav__link">
+    SchemaVersion
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -330,37 +389,19 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/marcosschroh/python-schema-registry-client/edit/master/docs/exceptions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/marcosschroh/python-schema-registry-client/edit/master/docs/schemas.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="clienterror">ClientError</h1>
-<p>An instance of ClientError is returned when an error occurs.</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">ClientError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Error thrown by Schema Registry clients &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">http_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">server_traceback</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">server_traceback</span> <span class="o">=</span> <span class="n">server_traceback</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">http_code</span> <span class="o">=</span> <span class="n">http_code</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">ClientError</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">())</span>
-
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;ClientError(error=</span><span class="si">{self.message}</span><span class="s2">)&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span>
-</pre></div>
-
-
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="c1"># Try to get the compatibility level of a subject that does not exist</span>
-    <span class="c1"># The Schema Registry Server returns 404</span>
-    <span class="n">compatibility</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_compatibility</span><span class="p">(</span><span class="s2">&quot;subject-does-not-exists&quot;</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-    <span class="c1"># Print 404</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">http_code</span><span class="p">)</span>
-</pre></div>
+                <h1 id="schemas">Schemas</h1>
+<h2 id="avroschema">AvroSchema</h2>
+<p><code>AvroSchema</code> parses strings into avro schemas to assure validation. Properties:</p>
+<p><code>raw_schema</code>: The input string that will be parsed</p>
+<p><code>schema</code>: Result of parsing the raw_schema with <code>fastavro</code></p>
+<p><code>flat_schena</code>: Parsed schema without <code>__fastavro_parsed</code> flag</p>
+<p><code>expanded_schema</code>: Parsed schema where all named types are expanded to their real schema</p>
+<h2 id="schemaversion">SchemaVersion</h2>
+<p><code>SchemaVersion</code> is a <code>namedtuple</code> that contains the <code>subject</code>, <code>schema_id</code>, <code>version</code> and <code>AvroSchema</code>.</p>
+<p>The <code>SchemaVersion</code> is returned by <code>get_schema</code> and <code>check_version</code> client methods</p>
                 
                   
                 
@@ -382,7 +423,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../schemas/" title="Schemas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../faust/" title="Faust integration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -391,19 +432,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Schemas
+                Faust integration
               </span>
             </div>
           </a>
         
         
-          <a href="../schemaregistry_server/" title="Schema Registry Server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../exceptions/" title="Exceptions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Schema Registry Server
+                Exceptions
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

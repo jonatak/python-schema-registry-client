@@ -226,30 +226,6 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../serializer/" title="Message Serializer" class="md-nav__link">
-      Message Serializer
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../faust/" title="Faust integration" class="md-nav__link">
-      Faust integration
-    </a>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
@@ -280,14 +256,14 @@
       
         <li class="md-nav__item">
   <a href="#schemaregistryclient" class="md-nav__link">
-    SchemaRegistryClient:
+    SchemaRegistryClient
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
-    Methods:
+    Methods
   </a>
   
     <nav class="md-nav">
@@ -302,14 +278,14 @@
         
           <li class="md-nav__item">
   <a href="#get-schema-by-id" class="md-nav__link">
-    Get schema by id:
+    Get schema by id
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#register-a-schema" class="md-nav__link">
-    Register a Schema:
+    Register a Schema
   </a>
   
 </li>
@@ -351,21 +327,21 @@
         
           <li class="md-nav__item">
   <a href="#test-compatibility" class="md-nav__link">
-    Test Compatibility:
+    Test Compatibility
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#get-compatibility" class="md-nav__link">
-    Get Compatibility:
+    Get Compatibility
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#update-compatibility" class="md-nav__link">
-    Update Compatibility:
+    Update Compatibility
   </a>
   
 </li>
@@ -383,6 +359,42 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../serializer/" title="Message Serializer" class="md-nav__link">
+      Message Serializer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faust/" title="Faust integration" class="md-nav__link">
+      Faust integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../schemas/" title="Schemas" class="md-nav__link">
+      Schemas
+    </a>
   </li>
 
     
@@ -432,14 +444,14 @@
       
         <li class="md-nav__item">
   <a href="#schemaregistryclient" class="md-nav__link">
-    SchemaRegistryClient:
+    SchemaRegistryClient
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
-    Methods:
+    Methods
   </a>
   
     <nav class="md-nav">
@@ -454,14 +466,14 @@
         
           <li class="md-nav__item">
   <a href="#get-schema-by-id" class="md-nav__link">
-    Get schema by id:
+    Get schema by id
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#register-a-schema" class="md-nav__link">
-    Register a Schema:
+    Register a Schema
   </a>
   
 </li>
@@ -503,21 +515,21 @@
         
           <li class="md-nav__item">
   <a href="#test-compatibility" class="md-nav__link">
-    Test Compatibility:
+    Test Compatibility
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#get-compatibility" class="md-nav__link">
-    Get Compatibility:
+    Get Compatibility
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#update-compatibility" class="md-nav__link">
-    Update Compatibility:
+    Update Compatibility
   </a>
   
 </li>
@@ -549,7 +561,7 @@
                 <h1 id="client">Client</h1>
 <p>The <code>Schema Registry Client</code> consumes the API exposed by the <code>schema-registry</code> to operate resources that are <code>avro</code> schemas.</p>
 <p>You probably won't use this but is good to know that exists. The <code>MessageSerialzer</code> is whom interact with the <code>SchemaRegistryClient</code></p>
-<h2 id="schemaregistryclient">SchemaRegistryClient:</h2>
+<h2 id="schemaregistryclient">SchemaRegistryClient</h2>
 <div class="codehilite"><pre><span></span><span class="n">SchemaRegistryClient</span>
     <span class="n">A</span> <span class="n">client</span> <span class="n">that</span> <span class="n">talks</span> <span class="n">to</span> <span class="n">a</span> <span class="n">Schema</span> <span class="n">Registry</span> <span class="n">over</span> <span class="n">HTTP</span>
 
@@ -564,7 +576,7 @@
 </pre></div>
 
 
-<h2 id="methods">Methods:</h2>
+<h2 id="methods">Methods</h2>
 <h4 id="get-schema">Get Schema</h4>
 <p>Get Schema for a given version. If version is <code>None</code>, try to resolve the latest schema</p>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_schema</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;latest&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">utils</span><span class="o">.</span><span class="n">SchemaVersion</span><span class="p">:</span>
@@ -585,7 +597,7 @@
 </pre></div>
 
 
-<h4 id="get-schema-by-id">Get schema by <code>id</code>:</h4>
+<h4 id="get-schema-by-id">Get schema by <code>id</code></h4>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_by_id</span><span class="p">(</span><span class="n">schema_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">client</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">AvroSchema</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
@@ -598,7 +610,7 @@
 </pre></div>
 
 
-<h4 id="register-a-schema">Register a Schema:</h4>
+<h4 id="register-a-schema">Register a Schema</h4>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">avro_schema</span><span class="p">:</span> <span class="n">client</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">AvroSchema</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
@@ -691,7 +703,7 @@
 
 <span class="sd">    Args:</span>
 <span class="sd">        subject (str): subject name</span>
-<span class="sd">        version (str): Version of the schema to be deleted. </span>
+<span class="sd">        version (str): Version of the schema to be deleted.</span>
 <span class="sd">            Valid values for versionId are between [1,2^31-1] or the string &quot;latest&quot;.</span>
 <span class="sd">            &quot;latest&quot; deletes the last registered schema under the specified subject.</span>
 <span class="sd">        headers (dict): Extra headers to add on the requests</span>
@@ -703,7 +715,7 @@
 </pre></div>
 
 
-<h4 id="test-compatibility">Test Compatibility:</h4>
+<h4 id="test-compatibility">Test Compatibility</h4>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">test_compatibility</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">avro_schema</span><span class="p">:</span> <span class="n">client</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">AvroSchema</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;latest&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    By default the latest version is checked against.</span>
@@ -719,7 +731,7 @@
 </pre></div>
 
 
-<h4 id="get-compatibility">Get Compatibility:</h4>
+<h4 id="get-compatibility">Get Compatibility</h4>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_compatibility</span><span class="p">(</span><span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the current compatibility level for a subject.  Result will be one of:</span>
@@ -739,7 +751,7 @@
 </pre></div>
 
 
-<h4 id="update-compatibility">Update Compatibility:</h4>
+<h4 id="update-compatibility">Update Compatibility</h4>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">update_compatibility</span><span class="p">(</span><span class="n">level</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Update the compatibility level for a subject.</span>
@@ -778,7 +790,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../faust/" title="Faust integration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -787,19 +799,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Faust integration
+                Introduction
               </span>
             </div>
           </a>
         
         
-          <a href="../exceptions/" title="Exceptions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../serializer/" title="Message Serializer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Exceptions
+                Message Serializer
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
